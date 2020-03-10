@@ -1,2 +1,187 @@
-@import 'reset.scss', '_variables.scss', '_mixins.scss';
+@import url('https://fonts.googleapis.com/css?family=Alice|Exo+2:100,200,300,400,500,600,700,800,900|Rajdhani:300,400,500,600,700&display=swap&subset=cyrillic');
+@import 'reset.scss';
+@import '_variables.scss', '_mixins.scss';
 
+
+/* Start user styles */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  display: grid;
+  grid-template-rows: minmax(20px, auto) 1fr minmax(70px, auto);
+}
+
+header {
+  background-color: #ccc;
+  font-family: $headerFont;
+}
+
+main {
+  background-color: #999;
+}
+
+footer {
+  background-color: #555;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+header {
+  padding: 20px 0;
+  color: $headerColor;
+  background-color: $bgSiteColor;
+
+  .container {
+    display: grid;
+    grid-template-columns: minmax(100px, auto) minmax(auto, 50px);
+    align-items: center;
+
+    .logo {
+      text-transform: uppercase;
+
+      .upper-logo {
+        font-size: 2rem;
+        font-weight: 400;
+        letter-spacing: 4.1px;
+      }
+
+      .bottom-logo {
+        font-weight: 300;
+        font-size: 1rem;
+      }
+    }
+
+    button {
+      width: 30px;
+      height: 10px;
+      background-color: transparent;
+      outline: none;
+      border: none;
+      border-top: 1px solid $headerColor;
+      border-bottom: 1px solid $headerColor;
+      cursor: pointer;
+
+      &:hover {
+        border-color: $accentColor;
+      }
+    }
+  }
+}
+
+main {
+  background-color: $bgSiteColor;
+  padding: 50px 0;
+
+  .container {
+    display: grid;
+    grid-template: repeat(3, minmax(50px, auto)) / 2fr 1fr;
+    grid-gap: 10px;
+    color: $mainColor;
+
+    h2 {
+      font-family: $menuFont;
+      font-size: 1.5rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-family: $mainFont;
+      font-weight: 200;
+      line-height: 1.2;
+    }
+
+    .about-me {
+      grid-row: 1 / -1;
+      grid-column: 1 / 2;
+
+      h2 {
+        margin-bottom: 20px;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      p {
+        text-align: justify;
+        text-indent: 20px;
+
+        &:first-of-type {
+          padding: 40px 0 0 0;
+        }
+      }
+
+      a.text-link {
+        text-decoration: underline;
+      }
+    }
+
+    .menu-wrapper {
+      grid-row: 1 / -1;
+      padding-top: 50px;
+
+      section {
+        margin-bottom: 30px;
+
+        h2 {
+          margin-bottom: 5px;
+        }
+
+        p {
+          padding-left: 25%;
+        }
+      }
+    }
+
+  }
+}
+
+footer {
+  font-family: $menuFont;
+  font-size: .8rem;
+  color: $footerColor;
+  background-color: $bgFooterColor;
+
+  .container {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 30px 10px;
+
+    a:nth-child(7) {
+      grid-row: 3 / 5;
+    }
+  }
+}
+
+.to-right {
+  text-align: right;
+}
+
+// Дальше заменить
+
+button:hover {
+  border-color: darkred;
+  border-width: 3px;
+}
+
+a {
+  transition: all, .5s;
+}
+
+a:hover {
+  color: $accentColor;
+}
+
+footer a:hover {
+  color: darken($footerColor, 40%);
+}
