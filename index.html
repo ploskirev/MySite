@@ -8,19 +8,66 @@
   <title>Denis Petrov-Ploskirev - front-end developer</title>
 </head>
 
-<body>
-  <header>
+<body class="with-header-static">
+  <header class="static-header">
     <div class="container">
       <h1 class="logo">
         <a href="#"><span class="upper-logo">Portfolio</span> <br>
           <span class="bottom-logo">Denis Petrov-Ploskirev</span></a>
       </h1>
       <div class="button-wrapper">
-        <button></button>
+        <button class="menu-btn"></button>
       </div>
     </div>
   </header>
-  <main>
+  <div class="mainmenu-wrapper hidden">
+    <button class="close-btn"></button>
+    <div class="container">
+      <nav class="main-menu">
+        <ul>
+          <li><a href="#">Главная</a></li>
+          <li><a href="portfolio.html">Портфолио</a></li>
+          <li><a href="techs.html">Технологии</a></li>
+          <li><a href="forhr.html">Hr-менеджеру</a></li>
+          <li><a href="education.html">Образование</a></li>
+          <li><a href="career.html">Карьера</a></li>
+        </ul>
+      </nav>
+      <div class="contacts">
+        <ul>
+          <li>email: <a href="mailto:ploskirevd@mail.ru">ploskirevd@mail.ru</a></li>
+          <li>тел.: <a href="tel:+79117417900">+79117417900</a></li>
+          <li>GitHub: <a href="https://github.com/ploskirev">ploskirev</a></li>
+          <li>Instagram: <a href="https://instagram.com/ploskirev.life">ploskirev.life</a></li>
+          <li><a href="#">Резюме</a></li>
+        </ul>
+      </div>
+      <section class="recomendations">
+        <h2>Рекомендации</h2>
+        <section>
+          <h3>Группа компаний Экостандарт</h3>
+          <p>Девятуха Денис - Руководитель филиала в Санкт-Петербурге</p>
+          <p>+79112172996</p>
+        </section>
+
+        <section>
+          <h3>Экостар</h3>
+          <p>Спиридонов Дмитрий - Генеральный директор</p>
+          <p>+79817590503</p>
+        </section>
+
+        <section>
+          <h3>Экостар</h3>
+          <p>Соболевская Валерия - Руководитель отдела</p>
+          <p>+79819666861</p>
+        </section>
+
+      </section>
+      <div class="bottom">&copy; Denis Petrov-Ploskirev 2020</div>
+    </div>
+
+  </div>
+  <main class="static-main">
     <div class="container">
       <section class="about-me">
         <h2>Немного о себе</h2>
@@ -35,31 +82,31 @@
           Я построил обучение, как на самостоятельном изучении учебников, самоучителей, видеоуроков и справочников, так и на онлайн-курсах (Geekbrains, HTMLAcademy, Udemy).
         </p>
         <p>
-          На сегодняшний день я хорошо изучил верстку на html/css, препроцессоры, JavaScript. Сейчас я продолжаю углебленное изучение ванильного JavaScript, работу со сборкой проектов на WebPack, а также изучаю JQuery и перехожу к изучению фреймворков Vue и React (чтобы понять, что мне ближе).
+          На сегодняшний день я хорошо изучил верстку на html/css, препроцессоры, JavaScript. Сейчас я продолжаю углебленное изучение ванильного JavaScript, работу со сборкой проектов на WebPack, а также JQuery и перехожу к изучению фреймворков Vue и React (чтобы понять, что мне ближе).
         </p>
         <p>
-          В разделе <a href="#" class="text-link">"ПОРТФОЛИО"</a> собраны мони наработки на сегодняшний день. В разделе <a href="#" class="text-link">"ТЕХНОЛОГИИ"</a> собрана сводка изученных и изучаемых технологий. В разделе <a href="#" class="text-link">"HR-МЕНЕДЖЕРУ"</a> - мое небольшое интервью. В разделе <a href="#" class="text-link">"ОБРАЗОВАНИЕ"</a> - информацию о моем образовании и пройденных курсах. В разделе <a href="#" class="text-link">"КАРЬЕРА"</a> собрана информация о моей деятельности на предыдущих местах работы.
+          На этом сайте в разделе <a href="portfolio.html" class="text-link">"ПОРТФОЛИО"</a> собраны мои наработки на сегодняшний день. В разделе <a href="techs.html" class="text-link">"ТЕХНОЛОГИИ"</a> собрана сводка изученных и изучаемых технологий. В разделе <a href="forhr.html" class="text-link">"HR-МЕНЕДЖЕРУ"</a> - мое небольшое интервью. В разделе <a href="education.html" class="text-link">"ОБРАЗОВАНИЕ"</a> - информацию о моем образовании и пройденных курсах. В разделе <a href="career.html" class="text-link">"КАРЬЕРА"</a> собрана информация о моей деятельности на предыдущих местах работы.
         </p>
       </section>
       <div class="menu-wrapper">
         <section>
-          <h2 class="to-right"><a href="#">Портфолио</a></h2>
+          <h2 class="to-right"><a href="portfolio.html">Портфолио</a></h2>
           <p class="to-right">Вёрстка страниц на html, css. Приложения на JavaScript</p>
         </section>
         <section>
-          <h2 class="to-right"><a href="#">Технологии</a></h2>
+          <h2 class="to-right"><a href="techs.html">Технологии</a></h2>
           <p class="to-right">Технологии, использованные в работах, а также изучаемые в данный момент</p>
         </section>
         <section>
-          <h2 class="to-right"><a href="#">HR-менеджеру</a></h2>
+          <h2 class="to-right"><a href="forhr.html">HR-менеджеру</a></h2>
           <p class="to-right">Моё интервью для hr-менеджера</p>
         </section>
         <section>
-          <h2 class="to-right"><a href="#">Образование</a></h2>
+          <h2 class="to-right"><a href="education.html">Образование</a></h2>
           <p class="to-right">Где я учился</p>
         </section>
         <section>
-          <h2 class="to-right"><a href="#">Карьера</a></h2>
+          <h2 class="to-right"><a href="career.html">Карьера</a></h2>
           <p class="to-right">Моя трудовая деятельность</p>
         </section>
       </div>
@@ -71,19 +118,19 @@
   </main>
   <footer>
     <div class="container">
-      <a href="#">Главная</a>
-      <a href="#">Портфолио</a>
-      <a href="#">Технологии</a>
-      <a href="#">HR-менеджеру</a>
+      <a href="#" class="f-index">Главная</a>
+      <a href="portfolio.html" class="f-portfolio">Портфолио</a>
+      <a href="techs.html" class="f-techs">Технологии</a>
+      <a href="forhr.html" class="f-hr">HR-менеджеру</a>
 
-      <a href="#">Образование</a>
-      <a href="#">Карьера</a>
-      <a href="#" target="_blank">Резюме</a>
+      <a href="education.html" class="f-edu">Образование</a>
+      <a href="career.html" class="f-career">Карьера</a>
+      <a href="#" target="_blank" class="f-cv">Резюме</a>
 
-      <a href="tel:+79117417900" target="_blank">+7 911 741 79 00</a>
-      <a href="mailto:ploskirevd@mail.ru" target="_blank">ploskirevd@mail.ru</a>
-      <a href="#" target="_blank">GitHub</a>
-      <a href="#" target="_blank">Instagram</a>
+      <a href="tel:+79117417900" target="_blank" class="f-tel">+7 911 741 79 00</a>
+      <a href="mailto:ploskirevd@mail.ru" target="_blank" class="f-mail">ploskirevd@mail.ru</a>
+      <a href="https://github.com/ploskirev" target="_blank" class="f-git">GitHub</a>
+      <a href="https://instagram.com/ploskire.life" target="_blank" class="f-insta">Instagram</a>
     </div>
   </footer>
 

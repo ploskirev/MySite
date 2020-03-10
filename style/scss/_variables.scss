@@ -1,16 +1,17 @@
+
 /*fonts*/
-$headerFont: 'Rajdhani', sans-serif;
-$menuFont: 'Alice', serif;
-$mainFont: 'Exo 2', sans-serif;
-
-
+$logoFont: 'Rajdhani', sans-serif;
+$headFont: 'Alice', serif;
+$primaryFont: 'Exo 2', sans-serif;
 
 /*colors*/
-$headerColor: #404040; 
-$mainColor: #2b2b2b;
-$footerColor: #f5f5f5;
+$primaryColor: #2b2b2b;
+$secondaryColor: #f5f5f5;
+$fadedColor: #999;
 $accentColor: darkred;
+$clickedColor: #000;
 
 /*background-colors*/
-$bgSiteColor: #f4f4f4;
-$bgFooterColor: #4d4d4d;
+$bgPrimaryColor: #f4f4f4;
+$bgSecondaryColor: #4d4d4d;
+$bgThirdColor: #858687;
