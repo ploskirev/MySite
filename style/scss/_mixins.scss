@@ -19,7 +19,7 @@
   }
 
   @else if $_media==desktop {
-    @media (min-width: 992px) and (max-width: 1199px) {
+    @media (min-width: 992px) and (max-width: 1200px) {
       @content;
     }
   }
