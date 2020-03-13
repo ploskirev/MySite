@@ -400,7 +400,7 @@ main {
       .portfolio-item-img {
         display: block;
         width: 100%;
-        
+
         border: 1px solid $fadedColor;
         border-radius: 5px;
         box-shadow: 0 20px 10px -17px $fadedColor;
@@ -562,10 +562,6 @@ main {
       background-color: $secondaryColor;
       transition: filter .3s;
 
-      &:hover {
-        filter: brightness(.95);
-      }
-
       span {
         color: $primaryColor;
       }
@@ -619,7 +615,7 @@ main {
 
       }
 
-      
+
 
       .career-info {
         position: fixed;
@@ -681,6 +677,195 @@ main {
     }
   }
 }
+
+
+/* education.html */
+
+.edu-main-wrapper {
+
+  .tabs-wrapper {
+    display: flex;
+    justify-content: flex-start;
+
+    .tab {
+      margin-right: 5px;
+      padding: 10px;
+      border: 1px solid $fadedColor;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      cursor: pointer;
+
+      &.active {
+        border-bottom-color: $bgPrimaryColor;
+        color: $accentColor;
+      }
+
+      &:hover {
+        color: $accentColor;
+      }
+    }
+  }
+
+  .tabs-content-wrapper {
+    margin-top: -1px;
+
+    .tab-content {
+      padding: 30px;
+      padding-bottom: 150px;
+      border: 1px solid $fadedColor;
+      min-height: 50vh;
+      font-weight: 200;
+      color: $fadedColor;
+
+      &#higher {
+        background: transparent url(../../img/high.png) no-repeat center bottom 30px / 50px;
+      }
+
+      &#courses {
+        background: transparent url(../../img/courses.png) no-repeat center bottom 30px / 50px;
+      }
+
+      &#lit {
+        background: transparent url(../../img/lit.png) no-repeat center bottom 30px / 50px;
+      }
+
+      h2 {
+        margin-bottom: 30px;
+        text-align: center;
+        color: $primaryColor;
+      }
+
+      h3 {
+        margin-top: 50px;
+        text-align: center;
+        color: $accentColor;
+        font-weight: 400;
+      }
+
+      .disclaimer {
+        margin-bottom: 10px;
+        font-weight: 100;
+        font-size: .8rem;
+        text-align: center;
+      }
+
+      .edu-main {
+        margin-bottom: 20px;
+      }
+
+      .edu-item {
+        margin-left: 50px;
+        margin-right: 50px;
+        padding-top: 30px;
+          padding-bottom: 30px;
+
+        &.udemy {
+          background: transparent url(../../img/udemy.png) no-repeat right 50px center / 80px;
+        }
+
+        &.gb {
+          background: transparent url(../../img/gbm.png) no-repeat right 50px center / 160px;
+        }
+
+        &.htmlacademy {
+          background: transparent url(../../img/htmlacademy.png) no-repeat right 50px center / 80px;
+        }
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $fadedColor;
+        }
+
+        div {
+          margin-bottom: 5px;
+          margin-left: -50px;
+        }
+
+        .in-progress::after {
+          content: '';
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          background: transparent url(../../img/clock.png) no-repeat 0 0 / 100%;
+          vertical-align: super;
+        }
+
+        .linked::after {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin-left: 5px;
+            vertical-align: super;
+            background: transparent url(../../img/link.png) no-repeat 0 0;
+            background-size: 100%;
+        }
+
+        time {
+          margin-left: -50px;
+        }
+      }
+
+      span {
+        color: $primaryColor;
+      }
+    }
+  }
+}
+
+/* techs.html */
+
+.techs-main-wrapper {
+
+  h2 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .disclaimer {
+    margin-bottom: 50px;
+    font-weight: 100;
+    font-size: .8rem;
+    text-align: center;
+  }
+
+  .techs-item {
+    display: flex;
+    width: 80%;
+    margin: 50px auto;
+
+    .techs-class {
+      writing-mode: vertical-lr;
+      width: 20%;
+      font-size: 5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $fadedColor;
+      text-align: center;
+
+      &.large {
+        letter-spacing: 35px;
+      }
+    }
+
+    .techs-content {
+      width: 80%;
+      padding-top: 20px;
+      display: flex;
+
+      ul {
+        margin-right: 50px;
+
+        li {
+          list-style-type: circle;
+          font-weight: 500;
+          font: 2rem;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+
 
 
 
