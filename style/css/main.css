@@ -91,6 +91,18 @@ body.with-header-static {
   width: 1200px;
 }
 
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: darkred;
+}
+
+a:active {
+  color: #000;
+}
+
 header {
   width: 100vw;
   padding: 20px 0;
@@ -117,6 +129,10 @@ header .header-wrapper .logo {
   font-family: "Rajdhani", sans-serif;
 }
 
+header .header-wrapper .logo::first-letter {
+  color: darkred;
+}
+
 header .header-wrapper .logo .upper-logo {
   font-size: 2rem;
   font-weight: 400;
@@ -126,6 +142,7 @@ header .header-wrapper .logo .upper-logo {
 header .header-wrapper .logo .bottom-logo {
   font-weight: 300;
   font-size: 1rem;
+  color: darkred;
 }
 
 header .header-wrapper button {
@@ -277,11 +294,15 @@ footer .footer-wrapper a:active {
   position: fixed;
   top: 30px;
   right: 40px;
-  z-index: 100;
+  z-index: 101;
   border: none;
   background: transparent url(../../img/close.png) no-repeat 0 0;
   background-size: 100%;
   cursor: pointer;
+}
+
+.mainmenu-wrapper .close-btn:hover {
+  background-image: url(../../img/closeRed.png);
 }
 
 .mainmenu-wrapper .mainmenu-inner-wrapper {
@@ -367,7 +388,7 @@ footer .footer-wrapper a:active {
 
 .mainmenu-wrapper .bottom {
   position: fixed;
-  z-index: 100;
+  z-index: 101;
   left: 0;
   bottom: 10px;
   width: 100vw;
@@ -391,6 +412,10 @@ main .main-wrapper h2 {
   font-size: 1.5rem;
   letter-spacing: 4px;
   text-transform: uppercase;
+}
+
+main .main-wrapper h2::first-letter {
+  color: darkred;
 }
 
 main .main-wrapper p {
@@ -427,7 +452,7 @@ main .index-main-wrapper {
 }
 
 main .main-wrapper .about-me h2 {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 main .main-wrapper .about-me img {
@@ -461,7 +486,7 @@ main .main-wrapper .about-me a.text-link:active {
 }
 
 main .main-wrapper .block-menu-wrapper {
-  padding-top: 50px;
+  margin-top: 100px;
 }
 
 main .main-wrapper .block-menu-wrapper p {
@@ -498,16 +523,29 @@ main .main-wrapper .block-menu-wrapper .block-menu-item p {
   border-bottom: 1px solid #999;
 }
 
-.portfolio-main-wrapper .portfolio-section .portfolio-item-img {
+.portfolio-main-wrapper .portfolio-section .image-link {
   display: block;
-  width: 100%;
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   grid-row: 1 / 3;
+}
+
+.portfolio-main-wrapper .portfolio-section .image-link .portfolio-item-img {
+  display: block;
+  width: 100%;
   border: 1px solid #999;
   border-radius: 5px;
   -webkit-box-shadow: 0 20px 10px -17px #999;
           box-shadow: 0 20px 10px -17px #999;
+  -webkit-transition: -webkit-filter .3s;
+  transition: -webkit-filter .3s;
+  transition: filter .3s;
+  transition: filter .3s, -webkit-filter .3s;
+}
+
+.portfolio-main-wrapper .portfolio-section .image-link .portfolio-item-img:hover {
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
 }
 
 .portfolio-main-wrapper .portfolio-section .portfolio-header {
@@ -540,6 +578,7 @@ main .main-wrapper .block-menu-wrapper .block-menu-item p {
 
 .portfolio-main-wrapper .portfolio-section .description-wrapper .links-container {
   margin-bottom: 70px;
+  color: darkred;
 }
 
 .portfolio-main-wrapper .portfolio-section .description-wrapper .links-container::after {
@@ -564,8 +603,243 @@ main .main-wrapper .block-menu-wrapper .block-menu-item p {
   padding: 0 10px;
 }
 
+/* career.html */
+.shadow {
+  position: fixed;
+  z-index: 9;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.career-main-wrapper .chronograph {
+  position: fixed;
+  left: 0;
+  top: 0;
+  font-size: 7rem;
+  z-index: 8;
+  color: #999;
+  -webkit-transform: rotate(-90deg) translateY(100px) translateX(-800px);
+          transform: rotate(-90deg) translateY(100px) translateX(-800px);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.career-main-wrapper h2 {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.carrer-main-inner-wrapper {
+  width: 800px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  color: #999;
+  font-weight: 300;
+}
+
+.carrer-main-inner-wrapper .career-item-wrapper {
+  padding-top: 30px;
+  width: 50%;
+  min-height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.carrer-main-inner-wrapper .career-item-wrapper:nth-child(4n+2), .carrer-main-inner-wrapper .career-item-wrapper:nth-child(4n+3) {
+  border-bottom: 1px solid #999;
+}
+
+.carrer-main-inner-wrapper .career-item-wrapper:nth-child(4n+2) {
+  padding-left: 40px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-left: 4px solid #999;
+}
+
+.carrer-main-inner-wrapper .career-item-wrapper:nth-child(4n+2) .career-item-date {
+  margin-left: -20px;
+  color: darkred;
+  font-size: .8rem;
+}
+
+.carrer-main-inner-wrapper .career-item-wrapper:nth-child(4n+3) {
+  padding-right: 40px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-right: 4px solid #999;
+  margin-right: -8px;
+}
+
+.carrer-main-inner-wrapper .career-item-wrapper:nth-child(4n+3) .career-item-date {
+  margin-right: -20px;
+  color: darkred;
+  font-size: .8rem;
+}
+
+.carrer-main-inner-wrapper .career-item-wrapper:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+
+.carrer-main-inner-wrapper .career-item-wrapper .career-item {
+  border: 3px solid #fff;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  padding: 10px;
+  width: 100%;
+  -webkit-box-shadow: 0 2px 2px 0 #999;
+          box-shadow: 0 2px 2px 0 #999;
+  background-color: #f5f5f5;
+  -webkit-transition: -webkit-filter .3s;
+  transition: -webkit-filter .3s;
+  transition: filter .3s;
+  transition: filter .3s, -webkit-filter .3s;
+}
+
+.carrer-main-inner-wrapper .career-item-wrapper .career-item:hover {
+  -webkit-filter: brightness(0.95);
+          filter: brightness(0.95);
+}
+
+.carrer-main-inner-wrapper .career-item-wrapper .career-item span {
+  color: #2b2b2b;
+}
+
+.carrer-main-inner-wrapper .career-item-wrapper .career-item a {
+  text-decoration: underline;
+}
+
+.carrer-main-inner-wrapper .career-item-wrapper .career-item .company-name {
+  margin-bottom: 10px;
+}
+
+.carrer-main-inner-wrapper .career-item-wrapper .career-item .company-name:not(.nolink)::after {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  vertical-align: super;
+  background: transparent url(../../img/link.png) no-repeat 0 0;
+  background-size: 100%;
+}
+
+.carrer-main-inner-wrapper .career-item-wrapper .career-item .career-item-tasks {
+  margin-bottom: 10px;
+}
+
+.carrer-main-inner-wrapper .career-item-wrapper .career-item .position {
+  margin-bottom: 30px;
+}
+
+.carrer-main-inner-wrapper .career-item-wrapper .career-item .more-info-career {
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  background-color: #858687;
+  color: #f5f5f5;
+  -webkit-box-shadow: 0 1px 2px 0 #999;
+          box-shadow: 0 1px 2px 0 #999;
+  font-size: .8rem;
+  cursor: pointer;
+}
+
+.carrer-main-inner-wrapper .career-item-wrapper .career-item .more-info-career:hover {
+  background-color: darkred;
+}
+
+.carrer-main-inner-wrapper .career-item-wrapper .career-item .more-info-career:active {
+  background-color: #000;
+}
+
+.carrer-main-inner-wrapper .career-item-wrapper .career-item .career-info {
+  position: fixed;
+  z-index: 10;
+  top: 100px;
+  left: calc(50% - 400px);
+  width: 800px;
+  height: 60vh;
+  border-radius: 20px;
+  padding: 30px;
+  background-color: #f4f4f4;
+  -webkit-box-shadow: 0 5px 10px 0 #999;
+          box-shadow: 0 5px 10px 0 #999;
+  overflow: scroll;
+}
+
+.carrer-main-inner-wrapper .career-item-wrapper .career-item .career-info .close-modal-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 15px;
+  height: 15px;
+  outline: none;
+  border: none;
+  background: transparent url(../../img/closeRed.png) no-repeat 0 0;
+  background-size: 75%;
+  cursor: pointer;
+}
+
+.carrer-main-inner-wrapper .career-item-wrapper .career-item .career-info .company-name:not(.nolink)::after {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  vertical-align: super;
+  background: transparent url(../../img/link.png) no-repeat 0 0;
+  background-size: 100%;
+}
+
+.carrer-main-inner-wrapper .career-item-wrapper .career-item .career-info .department {
+  margin-bottom: 10px;
+}
+
+.carrer-main-inner-wrapper .career-item-wrapper .career-item .career-info h3 {
+  text-align: center;
+  margin: 30px auto 20px auto;
+  font-size: 1.1rem;
+  font-weight: 200;
+}
+
+.carrer-main-inner-wrapper .career-item-wrapper .career-item .career-info li {
+  font-weight: 200;
+  color: #2b2b2b;
+  margin-bottom: 5px;
+  list-style-type: circle;
+}
+
+.unvisible {
+  visibility: hidden;
+}
+
 .hidden {
   display: none;
+}
+
+.freezed {
+  overflow: hidden;
 }
 
 .to-right {
