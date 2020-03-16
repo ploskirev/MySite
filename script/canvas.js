@@ -24,7 +24,7 @@ for (let i = 0; i < 25; i++) {
 function render() {
   ctx.clearRect(0, 0, 396, 345);
   for (let i = 0; i < balls.length; i++) {
-    ctx.strokeStyle = 'rgba(190, 120, 120, .5)';
+    ctx.strokeStyle = 'rgba(190, 120, 120, .3)';
     ctx.fillStyle = 'rgba(120, 120, 120, .05)';
     ctx.beginPath();
     ctx.arc(balls[i].x, balls[i].y, balls[i].r, 0, Math.PI*2, true);
