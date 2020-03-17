@@ -704,10 +704,15 @@ main .anotherblock canvas {
   font-size: 1rem;
   line-height: 1rem;
   border-radius: 7px;
-  background-color: rgba(40, 40, 40, 0.5);
+  background-color: rgba(20, 20, 20, 0.7);
   color: #f5f5f5;
   -webkit-box-shadow: 0 0 1px 0 #999;
           box-shadow: 0 0 1px 0 #999;
+}
+
+.portfolio-section .more-btn:hover {
+  background-color: rgba(139, 0, 0, 0.6);
+  color: #f5f5f5;
 }
 
 .portfolio-section .tags-container {
