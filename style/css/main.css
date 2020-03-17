@@ -86,6 +86,54 @@ body.with-header-static {
       grid-template-rows: minmax(20px, auto) 1fr minmax(70px, auto);
 }
 
+.display-checker {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  padding: 10px;
+  text-align: center;
+  background: #f4f4f4;
+  color: #2b2b2b;
+}
+
+.display-checker p {
+  margin-bottom: 20px;
+}
+
+@media (min-height: 500px) {
+  .display-checker {
+    background: #f4f4f4 url(../../img/error.png) no-repeat center bottom 50px/200px;
+  }
+}
+
+@media (max-width: 1199px) {
+  body {
+    position: fixed;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+  }
+  .display-checker {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .container {
   margin: 0 auto;
   width: 1200px;
@@ -563,24 +611,49 @@ main .anotherblock canvas {
   margin: 50px auto;
   padding: 30px;
   position: relative;
-  border: 15px solid #999;
+  border: 10px solid #999;
   border-radius: 40px;
   color: #f5f5f5;
 }
 
 .portfolio-section.p-graphista {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(../../../../../graphista.jpg) no-repeat 0 0/cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../../../../../graphista.jpg) no-repeat 0 0/cover;
-}
-
-.portfolio-section.p-slider {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(../../../../../slider.jpg) no-repeat 0 0/cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../../../../../slider.jpg) no-repeat 0 0/cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.85)), to(rgba(0, 0, 0, 0.7))), url(../../img/graphista.jpg) no-repeat 0 0/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.7)), url(../../img/graphista.jpg) no-repeat 0 0/cover;
 }
 
 .portfolio-section.p-space-balls {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(../../../../../spaceballs.jpg) no-repeat 0 0/cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../../../../../spaceballs.jpg) no-repeat 0 0/cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.1))), url(../../img/spaceballs.jpg) no-repeat 0 0/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url(../../img/spaceballs.jpg) no-repeat 0 0/cover;
+}
+
+.portfolio-section.p-slider {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.85)), to(rgba(0, 0, 0, 0.6))), url(../../img/slider.jpg) no-repeat 0 0/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.6)), url(../../img/slider.jpg) no-repeat 0 0/cover;
+}
+
+.portfolio-section.p-fishnet-chair {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.85)), to(rgba(0, 0, 0, 0.6))), url(../../img/FishnetChair.jpg) no-repeat 0 0/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.6)), url(../../img/FishnetChair.jpg) no-repeat 0 0/cover;
+}
+
+.portfolio-section.p-surfhouse {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.85)), to(rgba(0, 0, 0, 0.6))), url(../../img/Surfhouse.jpg) no-repeat 0 0/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.6)), url(../../img/Surfhouse.jpg) no-repeat 0 0/cover;
+}
+
+.portfolio-section.p-bootstrap {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.85)), to(rgba(0, 0, 0, 0.6))), url(../../img/bootstrap.jpg) no-repeat 0 0/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.6)), url(../../img/bootstrap.jpg) no-repeat 0 0/cover;
+}
+
+.portfolio-section.p-wolshino {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.85)), to(rgba(0, 0, 0, 0.6))), url(../../img/wolshino.jpg) no-repeat 0 0/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.6)), url(../../img/wolshino.jpg) no-repeat 0 0/cover;
+}
+
+.portfolio-section.p-yoga {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.85)), to(rgba(0, 0, 0, 0.6))), url(../../img/yoga.jpg) no-repeat 0 0/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.6)), url(../../img/yoga.jpg) no-repeat 0 0/cover;
 }
 
 .portfolio-section h2 {
@@ -670,9 +743,9 @@ main .anotherblock canvas {
   color: #999;
   -webkit-transform-origin: left;
           transform-origin: left;
-  -webkit-writing-mode: sideways-lr;
-      -ms-writing-mode: sideways-lr;
-          writing-mode: sideways-lr;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
 }
 
 .career-main-wrapper h2 {

@@ -1,0 +1,1309 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i|Roboto:400,500,700,700i,900,900i&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    height: 100%;
+    background-color: #f8f8f8;
+}
+
+
+/* GENERAL */
+
+.siteWrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 1170px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/* HEADER */
+
+header {
+    height: 700px;
+    overflow-x: auto;
+    background-color: #abeafa;
+    font-family: "Raleway", sans-serif;
+}
+
+header .flex {
+    align-items: flex-start;
+}
+
+header .logo {
+    margin-top: 24px;
+    margin-left: 69px;
+}
+
+header .logo:hover {
+    filter: drop-shadow(0 2px 2px #fff);
+}
+
+header .logo img {
+    width: 125px;
+    height: 111px;
+}
+
+header .logoSmall {
+    display: none;
+}
+
+header .social {
+    margin-right: 64px;
+    margin-top: 50px;
+}
+
+header .social a {
+    color: #fff;
+    padding-left: 4px;
+    padding-right: 4px;
+    transition: color 0.2s;
+}
+
+header .social a:hover {
+    color: #333;
+}
+
+header .social a:active {
+    color: #fff51f;
+}
+
+header .welcomeBanner {
+    margin-top: 201px;
+    width: 270px;
+    padding: 79px 30px 84px 23px;
+    background-color: #fff51f;
+}
+
+header .welcomeBanner h5 {
+    margin-left: 2px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: left;
+    color: #333;
+    text-transform: uppercase;
+
+}
+
+header .welcomeBanner p {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 14px;
+    letter-spacing: 0.23px;
+    color: #333;
+}
+
+header .promo {
+    margin-top: 108px;
+    margin-right: 109px;
+    width: 313px;
+}
+
+header .promo h2 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 34px;
+    text-transform: uppercase;
+    color: #fff51f;
+}
+
+header .promo p {
+    margin-top: 7px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #fff51f;
+}
+
+header .promo a {
+    display: inline-block;
+    margin-top: 60px;
+    margin-left: 2px;
+    padding: 17px 28px;
+    background-color: #fff51f;
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+header .promo a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+header .promo a:active {
+    background-color: #fff;
+    color: #333;
+}
+
+
+/* MAIN SECTION  (NAV & ASIDE & MAIN & BRANDS & SOCIAL & INSTA)*/
+
+
+.mainSection {
+    background-color: #f8f8f8;
+    font-family: "Roboto", sans-serif;
+}
+
+.mainSection .wrapper {
+    position: relative;
+    top: -20px;
+}
+
+.mainSection .flex {
+    align-items: flex-start;
+}
+
+.mainSection .leftSide {
+    width: 270px;
+    flex-shrink: 0;
+}
+
+.mainSection .leftSide h3 {
+    padding: 0 42px 0 42px;
+    background-color: #333;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 66px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.mainSection .mainMenu {
+    list-style-type: none;
+}
+
+.mainSection .mainMenu li {  
+    background-color: #26d2fc;
+    transition: all 0.2s;
+}
+
+.mainSection .mainMenu a {
+    display: block;
+    padding: 0 40px;
+    color: #000;
+    font-size: 14px;
+    line-height: 43px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+
+.mainSection .mainMenu li:hover {
+    background-color: #333;
+}
+
+.mainSection .mainMenu li:hover a {
+    color: #fff;
+}
+
+.mainSection .mainMenu li:active {
+    background-color: #fff;
+}
+
+.mainSection .mainMenu li:active a {
+    color: #333;
+}
+
+.mainSection .leftSide aside {
+    width: 100%;
+    height: 300px;
+    margin-top: 30px;
+    background: #e0e0e0 url('../img/banner.jpg') no-repeat 0 0;
+    background-size: cover;
+}
+
+.mainSection .leftSide aside p {
+    padding: 67% 5% 15% 40%;
+    font-family: "Raleway", sans-serif;
+    font-size: 29px;
+    font-weight: 800;
+    font-style: italic;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #ccc;
+}
+
+main {
+    width: 870px;
+}
+
+main section.sectionProducts {
+    background-color: #f8f8f8;
+}
+
+main .sectionProducts h2 {
+    padding-top: 65px;
+    padding-left: 25px;
+    font-size: 22px;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    color: #707070;
+}
+
+main .newProducts h2 {
+    padding-top: 29px;
+}
+
+.productsGallery.flex {
+    flex-wrap: wrap;
+}
+
+.productItem {
+    margin-top: 26px;
+    margin-right: 30px;
+    padding: 10px;
+    width: 270px;
+    height: 320px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 2px 20px 0 #ddd;
+}
+
+.productItem .productItemImage img {
+    width: 100%;
+}
+
+.productItem:nth-of-type(3n) {
+    margin-right: 0;
+}
+
+.productItem.newProduct {
+    position: relative;
+}
+
+.productItem.newProduct::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+    border: 23px solid transparent; 
+    border-top: 23px solid #e24602; 
+    border-right: 23px solid #e24602;
+    filter: drop-shadow(-1px 0px 2px #333);
+}
+
+.productItem.newProduct::after {
+    content: 'new';
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 9px;
+    right: 6px;
+    color: #fff;
+    font-size: 9px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.productItem.hotProduct {
+    position: relative;
+}
+
+.productItem.hotProduct::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+    border: 23px solid transparent; 
+    border-top: 23px solid #faef03; 
+    border-right: 23px solid #faef03;
+    filter: drop-shadow(-1px 0px 4px #333);
+}
+
+.productItem.hotProduct::after {
+    content: 'hot';
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 9px;
+    right: 6px;
+    color: #000;
+    font-size: 9px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.productInfoWrapper {
+    padding: 12px 5px 10px 16px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.productInfoWrapper .productItemName {
+    max-height: 2.4em;
+    max-width: 10em;
+    font-size: 14px;
+    line-height: 18px;
+    color: #333;
+    overflow: hidden;
+}
+
+.productInfoWrapper .productItemName a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s;
+}
+
+.productInfoWrapper .productItemName a:hover {
+    color: #26d2fc;
+}
+
+.productInfoWrapper .productItemName a:active {
+    color: #fff51f;
+}
+
+.productInfoWrapper .productItemPrice {
+    margin-top: 3px;
+    font-size: 18px;
+    color: #333;
+}
+
+.productInfoWrapper .productItemOldPrice {
+    font-size: 14px;
+    text-decoration: line-through;
+    text-align: right;
+    color: #e24602;
+}
+
+.productItemOldPrice.hidden {
+    visibility: hidden;
+}
+
+.brands {
+    margin: 30px auto 0 auto;
+    width: 100%;
+}
+
+.brands img {
+    width: 100%;
+}
+
+.instaSection {
+    width: 100%;
+    padding: 50px 0 60px 0;
+    background-color: #eaeaea;
+}
+
+.instaSection h5 {
+    margin: 0 auto;
+    margin-bottom: 25px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.instaSection h5 span {
+    font-size: 18px;
+}
+
+.instaGallery {
+    width: 100%;
+}
+
+.instaGallery a {
+    flex-shrink: 1;
+}
+
+.instaGallery a img {
+    width: 100%;
+}
+
+.instaSection a {
+    color: #333;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.instaSection a:hover {
+    transform: scale(1.08);
+}
+
+.instaSection a:active {
+    transform: scale(1);
+}
+
+.socialSection.flex {
+    justify-content: center;
+}
+
+.socialSection a {
+    display: block;
+    width: calc(100% / 3);
+    height: 150px;
+    color: #fff;
+    font-size: 64px;
+    text-align: center;
+    line-height: 150px;
+    transition: filter 0.2s, position 0.2s, box-shadow 0.1s;
+}
+
+.socialSection a:hover {
+    filter: brightness(1.2);
+}
+
+.socialSection a:active {
+    position: relative;
+    top: 2px;
+    box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.facebookButton {
+    background-color: #3b5997;
+}
+
+.twitterButton {
+    background-color: #3fccfd;
+}
+
+.pinterestButton {
+    background-color: #cb2027;
+}
+
+
+/* FOOTER */
+
+footer {
+    margin-top: -20px;
+    flex: 0 0 auto;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.footerMain {
+    background-color: #373737;
+}
+
+.footerBottom {
+    height: 50px;
+    background-color: #333;
+}
+
+.footerMain .wrapper {
+    padding: 70px 25px 64px 25px; 
+}
+
+.footerMain .leftSideFooter {
+    width: 550px;
+    padding-right: 20px;
+}
+
+.footerMain .rightSideFooter {
+    width: 550px;
+    padding-left: 20px;
+}
+
+.leftSideFooter.flex,
+.rightSideFooter.flex {
+    align-items: flex-start;
+}
+
+
+.footerMain ul {
+    list-style: none;
+}
+
+.footerMain ul a {
+    line-height: 18px;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s, color 0.2s;
+}
+
+.footerMain ul a:hover {
+    border-bottom-color: #ccc;
+}
+
+.footerMain ul a:active {
+    color: #faef03;
+    border-bottom-color: #faef03;
+}
+
+.footerMain h6 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footerMain .newsletterBlock {
+    width: 270px;
+}
+
+.newsletterHeading,
+.newsletterBlock form {
+    margin-left: 8px;
+}
+
+.footerMain .aboutUsBlock {
+    width: 235px;
+    margin-left: 10px;
+}
+
+.rightSideFooter h6 {
+    margin-bottom: 5px;
+}
+
+.footerMain form {
+    margin-bottom: 45px;
+}
+
+.footerMain label {
+    display: block;
+    padding-right: 20px;
+    margin-bottom: 12px;
+}
+
+.inputBlock {
+    display: flex;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.footerMain input[type="email"] {
+    width: 180px;
+    height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #fff51f;
+    color: #333;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 0;
+}
+
+.footerMain input[type="email"]:focus {
+    outline-width: 2px;
+}
+
+.footerMain input[type="submit"] {
+    width: 70px;
+    height: 30px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.footerMain input[type="submit"]:focus {
+    outline: none;
+}
+
+.footerMain input[type="submit"]:active {
+    background-color: #ddd;
+    color: #333;
+}
+
+.footerMain .paymentBanners img {
+    display: inline-block;
+    margin: 0 3px;
+    
+}
+
+.footerMain .aboutUsBlock p {
+    margin-bottom: 7px;
+    line-height: 12px;
+}
+
+.footerMain .aboutUsBlock dt,
+.footerMain .aboutUsBlock dd {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.footerMain .aboutUsBlock dt {
+    margin-right: 15px;
+}
+
+.footerMain .aboutUsBlock dd.email {
+    color: #faef03;
+}
+
+.footerBottom .flex {
+    align-items: center;
+}
+
+.footerBottom p {
+    line-height: 50px;
+}
+
+.footerBottom .footerSocialBar a {
+    display: block;
+    margin: 0 7px;
+    color: #fff;
+    transition: color 0.2s;
+}
+
+.footerBottom .footerSocialBar a:hover {
+    color: #faef03;
+}
+
+.footerBottom .footerSocialBar a:active {
+    color: #26d2fc;
+}
+
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .wrapper {
+        width: 960px;
+    }
+    
+    .productsGallery {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+    .productsGallery .productItem {
+        margin-right: 0;
+    }
+    
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .wrapper {
+        width: 720px;
+    }
+    
+    header {
+        height: 550px;
+    }
+    
+    header .welcomeBanner {
+        margin-top: 101px;
+        padding: 40px 25px;
+    }
+    
+    header .promo {
+        margin-top: 60px;
+        margin-right: 30px;
+    }
+    
+    .mainSection .leftSide {
+        width: 200px;
+    }
+    
+    .mainSection .leftSide h3,
+    .mainSection .leftSide .mainMenu a {
+        padding: 0 20px;
+    }
+    
+    .mainSection .leftSide aside {
+        height: 240px;
+    }
+    
+    .productsGallery {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    .productsGallery .productItem {
+        margin-right: 0;
+        width: 200px;
+        height: 250px;
+    }
+    
+    .productItem.newProduct::before,
+    .productItem.hotProduct::before{
+        border-width: 20px;
+        border-top-width: 20px;
+        border-right-width: 20px;
+    }
+    
+    .productItem.newProduct::after,
+    .productItem.hotProduct::after {
+        top: 8px;
+        right: 3px;
+        font-size: 8px;
+    }
+    
+    .footerMain > .wrapper {
+        padding: 30px 25px 25px 25px;
+    }
+    
+    .footerMain > .flex {
+        flex-direction: column;
+    }
+    
+    .leftSideFooter.flex {
+        width: 95%;
+        padding-right: 0;
+        padding-bottom: 25px;
+    }
+     .rightSideFooter.flex {
+        width: 95%;
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .wrapper {
+        width: 540px;
+    }
+    
+    header {
+        height: 450px;
+    }
+    
+    header .logo {
+        display: none;
+    }
+    
+    header .logoSmall {
+        display: block;
+        margin-top: 30px;
+    }
+    
+    header .social {
+        margin-top: 29px;
+        margin-right: 15px;
+    }
+    
+    header .welcomeBanner {
+        margin-top: 51px;
+        padding: 25px;
+    }
+    
+    header .welcomeBanner h5 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+    
+    header .welcomeBanner p {
+        font-size: 14px;
+        line-height: 12px;
+    }
+    
+    header .promo {
+        margin-top: 100px;
+        margin-right: 20px;
+        margin-left: 80px;
+    }
+    
+    header .promo h2 {
+        font-size: 34px;
+        line-height: 26px;
+    }
+    
+    header .promo p {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    
+    header .promo a {
+        margin-top: 35px;
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+    
+    .mainSection .leftSide {
+        width: 130px;
+    }
+    
+    .mainSection .leftSide h3,
+    .mainSection .leftSide .mainMenu a {
+        padding: 0 10px;
+    }
+    
+    .mainSection .leftSide h3 {
+        font-size: 12px;
+        line-height: 44px;
+    }
+    
+    .mainSection .leftSide nav a {
+        font-size: 12px;
+        line-height: 34px;
+    }
+    
+    .mainSection .leftSide aside {
+        height: 160px;
+    }
+    
+    .mainSection .leftSide aside p {
+        padding-top: 67%;
+        padding-left: 44%;
+        font-size: 21px;
+        line-height: 18px;
+    }
+    
+    main .sectionProducts h2 {
+        padding-top: 20px;
+        font-size: 18px;
+    }
+    
+    .productsGallery {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .productsGallery .productItem {
+        margin-right: 0;
+        width: 180px;
+        height: 230px;
+    }
+    
+    .productItem.newProduct::before,
+    .productItem.hotProduct::before{
+        border-width: 15px;
+        border-top-width: 15px;
+        border-right-width: 15px;
+    }
+    
+    .productItem.newProduct::after,
+    .productItem.hotProduct::after {
+        top: 6px;
+        right: 1px;
+        font-size: 8px;
+    }
+    
+    .productsGallery .productItem .productInfoWrapper {
+        padding-left: 5px;
+    }
+    
+    .productsGallery .productItem .productItemName {
+        padding-right: 5px;
+        max-height: 3em;
+        font-size: 12px;
+        line-height: 12px;
+    }
+    
+    .productsGallery .productItem .productItemPrice {
+        font-size: 12px;
+        line-height: 12px;
+    }
+    
+    .productsGallery .productItem .productItemOldPrice {
+        font-size: 10px;
+        line-height: 10px;
+    }
+    
+    .instaSection {
+        padding: 25px 0;
+    }
+    
+    .socialSection a {
+        height: 60px;
+        font-size: 32px;
+        line-height: 60px;
+    }
+    
+    .footerMain > .wrapper {
+        padding: 30px 15px 25px 15px;
+    }
+    
+    .footerMain > .flex {
+        flex-direction: column;
+    }
+    
+    .leftSideFooter.flex {
+        width: 95%;
+        padding-right: 0;
+        padding-bottom: 25px;
+    }
+    
+    .rightSideFooter.flex {
+        width: 95%;
+        padding-left: 0;
+    }
+    
+    .footerMain h6 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    
+    .footerMain ul a,
+    .footerMain p,
+    .footerMain label {
+        font-size: 10px;
+        line-height: 12px;
+    }
+    
+    .newsletterHeading, .newsletterBlock form {
+        margin-left: 0;
+    }
+    
+    .newsletterBlock form {
+        margin-bottom: 20px;
+    }
+    
+    .newsletterBlock input[type="email"] {
+        width: 150px;
+        padding: 0 10px;
+    }
+    
+    .footerMain .paymentBanners img {
+        width: 12%;
+        margin: 0 2px;
+    }
+    
+    .footerMain .aboutUsBlock dt, 
+    .footerMain .aboutUsBlock dd {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    
+    .footerBottom p {
+        font-size: 10px;
+    }
+    
+}
+
+@media (max-width: 575px) {
+    .wrapper {
+        width: 100%;
+    }
+    
+    header {
+        height: 350px;
+    }
+    
+    header .logo {
+        display: none;
+    }
+    
+    header .logoSmall {
+        display: block;
+        margin-top: 30px;
+        margin-left: 15px;
+    }
+    
+    header .social {
+        margin-top: 29px;
+        margin-right: 15px;
+    }
+    
+    header .welcomeBanner {
+        margin-top: 51px;
+        padding: 10px;
+    }
+    
+    header .welcomeBanner h5 {
+        font-size: 14px;
+        line-height: 14px;
+    }
+    
+    header .welcomeBanner p {
+        font-size: 10px;
+        line-height: 8px;
+    }
+    
+    header .promo {
+        margin-top: 70px;
+        margin-right: 10px;
+        margin-left: 50px;
+    }
+    
+    header .promo h2 {
+        font-size: 24px;
+        line-height: 16px;
+    }
+    
+    header .promo p {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    
+    header .promo a {
+        margin-top: 25px;
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+    
+    .mainSection .wrapper.flex {
+        flex-direction: column;
+    }
+    
+    .mainSection .leftSide {
+        width: 100%;
+    }
+    
+    .mainSection .leftSide nav .mainMenu {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .mainSection .leftSide nav .mainMenu li {
+        flex: 1 0 auto;
+        border-bottom: 1px solid gray;
+        border-right: 1px solid gray;
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 25px;
+    }
+    
+    .mainSection .leftSide nav .mainMenu li a {
+        text-align: center;
+        padding: 0;
+        word-wrap: normal;
+        font-size: 10px;
+        line-height: 12px;
+    }
+    
+    .mainSection .leftSide h3,
+    .mainSection .leftSide .mainMenu a {
+        padding: 0 10px;
+    }
+    
+    .mainSection .leftSide h3 {
+        font-size: 12px;
+        line-height: 44px;
+    }
+    
+    .mainSection .leftSide nav a {
+        font-size: 12px;
+        line-height: 34px;
+    }
+    
+    .mainSection .leftSide aside {
+        margin: 20px auto;
+        width: 230px;
+        height: 280px;
+    }
+    
+    .mainSection .leftSide aside p {
+        padding-top: 75%;
+        padding-left: 44%;
+        font-size: 30px;
+        line-height: 30px;
+    }
+    
+    main {
+        width: 100%;
+    }
+    
+    main .sectionProducts h2 {
+        padding-top: 20px;
+        font-size: 18px;
+    }
+    
+    .productsGallery.flex {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        justify-content: center;
+    }
+    
+    .productsGallery .productItem {
+        margin-right: 0;
+        width: 250px;
+        height: 280px;
+    }
+    
+    .productItem.newProduct::before,
+    .productItem.hotProduct::before{
+        border-width: 15px;
+        border-top-width: 15px;
+        border-right-width: 15px;
+    }
+    
+    .productItem.newProduct::after,
+    .productItem.hotProduct::after {
+        top: 6px;
+        right: 1px;
+        font-size: 8px;
+    }
+    
+    .productsGallery .productItem .productInfoWrapper {
+        padding-left: 5px;
+    }
+    
+    .productsGallery .productItem .productItemName {
+        padding-right: 5px;
+        max-height: 3em;
+        font-size: 12px;
+        line-height: 12px;
+    }
+    
+    .productsGallery .productItem .productItemPrice {
+        font-size: 12px;
+        line-height: 12px;
+    }
+    
+    .productsGallery .productItem .productItemOldPrice {
+        font-size: 10px;
+        line-height: 10px;
+    }
+    
+    .instaSection {
+        padding: 25px 0;
+    }
+    
+    .instaGallery.flex {
+        flex-wrap: wrap;
+    }
+    
+    .instaGallery.flex a {
+        width: 30%;
+        margin-bottom: 10px;
+    }
+    
+    .socialSection a {
+        height: 60px;
+        font-size: 32px;
+        line-height: 60px;
+    }
+    
+    .footerMain > .wrapper {
+        padding: 15px 5px 15px 5px;
+    }
+    
+    .footerMain > .flex {
+        flex-direction: column;
+    }
+    
+    .leftSideFooter.flex {
+        margin: 0 auto;
+        width: 95%;
+        padding-right: 0;
+        padding-bottom: 25px;
+    }
+    
+    .rightSideFooter.flex {
+        margin: 0 auto;
+        width: 95%;
+        padding-left: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .footerMain h6 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    
+    .footerMain ul a,
+    .footerMain p,
+    .footerMain label {
+        font-size: 10px;
+        line-height: 12px;
+    }
+    
+    .newsletterHeading, .newsletterBlock form {
+        margin-left: 0;
+    }
+    
+    .footerMain .newsletterBlock {
+        margin-bottom: 25px;
+        width: 100%;
+    }
+    
+    .newsletterBlock form {
+        margin-bottom: 20px;
+    }
+    
+    .newsletterBlock input[type="email"] {
+        width: 250px;
+        padding: 0 10px;
+    }
+    
+    .footerMain .paymentBanners {
+        text-align: center;
+    }
+    
+    .footerMain .paymentBanners img {
+        width: 12%;
+        margin: 0 2px;
+    }
+    
+    .footerMain .aboutUsBlock {
+        margin-left: 0;
+        width: auto;
+    }
+    
+    .footerMain .aboutUsBlock p {
+        text-align: justify;
+    }
+    
+    .footerMain .aboutUsBlock dl {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .footerMain .aboutUsBlock dt {
+        margin-right: 0;
+    }
+    
+    .footerMain .aboutUsBlock dt, 
+    .footerMain .aboutUsBlock dd {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    
+    .footerBottom {
+        height: auto;
+    }
+    
+    .footerBottom .wrapper.flex {
+        flex-direction: column;
+    }
+    
+    .footerBottom p {
+        order: 2;
+        font-size: 8px;
+        line-height: 12px;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        color: #ccc;
+    }
+    
+    .footerSocialBar {
+        order: 1;
+        margin-top: 10px;
+        font-size: 10px;
+    }
+    
+}
