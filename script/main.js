@@ -1,16 +1,21 @@
 'use strict';
 
-let menuBtn = document.querySelector('.menu-btn');
-let closeBtn = document.querySelector('.close-btn');
-let modalMenu = document.querySelector('.mainmenu-wrapper');
-
-menuBtn.addEventListener('click', openMenu);
-closeBtn.addEventListener('click', closeMenu);
-
-function openMenu() {
-  modalMenu.classList.remove('hidden');
-}
-
-function closeMenu() {
-  modalMenu.classList.add('hidden');
-}
+class Modal {
+    constructor(opnBtnSelector, clsBtnSelector, mdlWindowSelector) {
+      this.window = document.querySelector(mdlWindowSelector);
+      this.openButton = document.querySelector(opnBtnSelector);
+      this.closeButton = document.querySelector(clsBtnSelector);
+      this.init();
+    }
+  
+    handleEvent() {
+      this.window.classList.toggle('hidden');
+    }
+  
+    init() {
+      this.openButton.addEventListener('click', this);
+      this.closeButton.addEventListener('click', this);
+    }
+  }
+  
+  let mainModalMenu = new Modal('.menu-btn', '.close-btn', '.mainmenu-wrapper');

@@ -1,51 +1,67 @@
 'use strict';
 
-
-
-function getTime() {
-  let now = Date.now();
-  let start = new Date('2020-03-15T13:23:00');
-  let diff = now - start;
-
-  let days = '' + Math.floor(diff / 86400000);
-  let hours = '' + Math.floor((diff % 86400000) / 3600000);
-  let mins = '' + Math.floor(((diff % 86400000) % 3600000) / 60000);
-  let secs = '' + Math.floor((((diff % 86400000) % 3600000) % 60000) / 1000);
-
-  while (hours.length < 2) {
-    hours = '0' + hours;
-  }
-  while (mins.length < 2) {
-    mins = '0' + mins;
-  }
-  while (secs.length < 2) {
-    secs = '0' + secs;
+class Timer {
+  constructor(startDate, timerContainer, dayContainer, hourContainer, minContainer, secContainer) {
+    this.start = new Date(startDate);
+    this.container = document.querySelector(timerContainer);
+    this.dayField = this.container.querySelector(dayContainer);
+    this.hourField = this.container.querySelector(hourContainer);
+    this.minField = this.container.querySelector(minContainer);
+    this.secField = this.container.querySelector(secContainer);
+    setInterval(() => this.init(), 1000);
   }
 
-  let lastIndex = days[days.length - 1];
-  let preLastIndex = days[days.length - 2];
-
-  let word = '';
-  if (preLastIndex != 1 && lastIndex == 1) {
-    word = ' день';
-  } else if (preLastIndex != 1 && lastIndex <= 4 && lastIndex >= 2) {
-    word = ' дня';
-  } else {
-    word = ' дней';
+  getDuration() {
+    this.duration = Date.now() - this.start;
   }
 
+  convertDuration() {
+    let d = this.duration;
+    this.days = Math.floor(d / (1000 * 60 * 60 * 24)) + '';
+    this.hours = Math.floor(d / (1000 * 60 * 60) % 24) + '';
+    this.minutes = Math.floor(d / (1000 * 60) % 60) + '';
+    this.seconds = Math.floor(d / (1000) % 60) + '';
+  }
 
+  checkLength(field, digit) {
+    while (digit.length < 2) {
+      digit = '0' + digit;
+    }
+    this[field] = digit;
+  }
 
-  let timer = document.querySelector('#timer');
-  let daysField = timer.querySelector('#days');
-  let hoursField = timer.querySelector('#hours');
-  let minsField = timer.querySelector('#mins');
-  let secsField = timer.querySelector('#secs');
+  makeWord() {
+    let lastIndex = this.days[this.days.length - 1];
+    let preLastIndex = this.days[this.days.length - 2];
 
-  daysField.textContent = `${days} ${word}`;
-  hoursField.textContent = `${hours}`;
-  minsField.textContent = `${mins}`;
-  secsField.textContent = `${secs}`;
+    let word = '';
+    if (preLastIndex != 1 && lastIndex == 1) {
+      word = ' день';
+    } else if (preLastIndex != 1 && lastIndex <= 4 && lastIndex >= 2) {
+      word = ' дня';
+    } else {
+      word = ' дней';
+    }
+
+    return word;
+  }
+
+  render() {
+    this.dayField.textContent = `${this.days} ${this.makeWord()}`;
+    this.hourField.textContent = `${this.hours}`;
+    this.minField.textContent = `${this.minutes}`;
+    this.secField.textContent = `${this.seconds}`;
+  }
+
+  init() {
+    this.getDuration();
+    this.convertDuration();
+    this.checkLength('hours', this.hours);
+    this.checkLength('minutes', this.minutes);
+    this.checkLength('seconds', this.seconds);
+    this.makeWord();
+    this.render();
+  }
 }
 
-setInterval(getTime, 1000);
+let timer = new Timer('2020-03-15T13:23:00', '#timer', '#days', '#hours', '#mins', '#secs');

@@ -1,31 +1,31 @@
 'use strict';
 
-let wrapper = document.querySelector('.edu-main-wrapper');
-let tabButtons = document.querySelectorAll('.tab');
-let tabsWrapper = document.querySelector('.tabs-wrapper');
-let tabs = document.querySelectorAll('.tab-content');
+class Tabs {
+  constructor(mainContainer, tabButton, tabButtonsContainer, tabsContent) {
+    this.container = document.querySelector(mainContainer);
+    this.tabButtons = this.container.querySelectorAll(tabButton);
+    this.tabButtonsContainer = this.container.querySelector(tabButtonsContainer);
+    this.tabsContent = this.container.querySelectorAll(tabsContent);
+    this.init();
+  }
 
+  handleEvent(event) {
+    this.tabButtons.forEach((tabButton, index) => {
+      if (tabButton == event.target) {
+        for (let i = 0; i < this.tabButtons.length; i++) {
+          this.tabButtons[i].classList.remove('active');
+          this.tabsContent[i].classList.add('hidden');
+          tabButton.classList.add('active');
+          this.tabsContent[index].classList.remove('hidden');
+        }
+      }
+    });
+  }
 
-
-for (let i = 0; i < tabButtons.length; i++) {
-  tabButtons[i].addEventListener('mouseover', (e) => {
-    for (let j = 0; j < tabButtons.length; j++) {
-      tabButtons[j].classList.remove('active');
-      tabs[j].classList.add('hidden');
-    }
-    tabButtons[i].classList.add('active');
-    tabs[i].classList.remove('hidden');
-  });
+  init() {
+    this.tabButtonsContainer.addEventListener('click', this);
+    this.tabButtonsContainer.addEventListener('mouseover', this);
+  }
 }
 
-
-wrapper.addEventListener('click', (e) => {
-  for (let i = 0; i < tabButtons.length; i++) {
-    tabButtons[i].classList.remove('active');
-    tabs[i].classList.add('hidden');
-    e.target.classList.add('active');
-    if (e.target == tabButtons[i]) {
-      tabs[i].classList.remove('hidden');
-    }
-  }
-});
+let eduTabs = new Tabs('.edu-main-wrapper', '.tab', '.tabs-wrapper', '.tab-content');
