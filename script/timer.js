@@ -64,4 +64,4 @@ class Timer {
   }
 }
 
-let timer = new Timer('2020-03-15T13:23:00', '#timer', '#days', '#hours', '#mins', '#secs');
+let timer = new Timer('2020-03-18T03:22:00', '#timer', '#days', '#hours', '#mins', '#secs');
