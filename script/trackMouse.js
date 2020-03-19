@@ -14,12 +14,11 @@ class Canvas {
   }
 
   getRandom(max) {
-    let rand = Math.random() * max;
-    return rand;
+    return Math.random() * max;
   }
 
   getRandomFrom(min, max) {
-    return Math.random() * (max - min) + min;
+    return Math.floor(Math.random() * (max - min) + min);
   }
 
   getCoordinates(e) {
@@ -105,8 +104,8 @@ class Canvas {
             this.toRend.push(point);
           }
         });
-        this.ctx.strokeStyle = 'rgba(210, 120, 120, .03)';
-        this.ctx.lineWidth = 1;
+        this.ctx.strokeStyle = 'rgba(210, 120, 120, .1)';
+        this.ctx.lineWidth = 0.5;
         this.ctx.beginPath();
         this.toRend.forEach((point) => {
           this.ctx.lineTo(point.x, point.y);
