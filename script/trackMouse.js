@@ -28,10 +28,12 @@ class Canvas {
 
   createBalls() {
     let x = -10;
+    let col = 0;
     while (x <= this.width + 30) {
       let y = -10 + this.getRandomFrom(-10, 10);
       let row = 0;
       let xCurr = x;
+      col++;
       while (row <= 17) {
         let vx = this.getRandom(0.1);
         let vy = this.getRandom(0.1)
@@ -43,6 +45,7 @@ class Canvas {
           r: 1,
           vx: vx,
           vy: vx,
+          col: col
         }
         row++;
         this.balls.push(ball);
@@ -69,50 +72,37 @@ class Canvas {
     this.ctx.clearRect(0, 0, this.width, this.height);
     this.balls.forEach((ball, index) => {
       this.ctx.strokeStyle = 'rgba(120, 120, 120, .3)';
-      this.ctx.fillStyle = 'rgba(210, 120, 120, .01)';
       this.ctx.lineWidth = 1;
       this.ctx.beginPath();
       this.ctx.arc(ball.x, ball.y, ball.r, 0, Math.PI * 2, true);
       this.ctx.stroke();
-      this.ctx.fill();
+      this.ctx.closePath();
 
-      if (true) {
-
-        this.ctx.moveTo(ball.x, ball.y);
-        if ((index + 1) % 18 != 0) {
-          this.ctx.beginPath();
-
-          this.ctx.lineTo(ball.x, ball.y);
-          this.ctx.lineTo(this.balls[index + 1].x, this.balls[index + 1].y);
-          this.ctx.stroke();
-        }
-
-        if (index < this.balls.length - 18) {
-          this.ctx.lineTo(ball.x, ball.y);
-          this.ctx.lineTo(this.balls[index + 18].x, this.balls[index + 18].y);
-          this.ctx.stroke();
-        }
-        this.ctx.closePath();
-
-        this.toRend = [];
-        this.balls.forEach((ball, index) => {
-          if ((index + 1) % 18 != 0 && index <= this.balls.length - 19 && this.coordinates.x - ball.x > -30 && this.coordinates.x - ball.x < 30 && this.coordinates.y - ball.y > -70 && this.coordinates.y - ball.y < 70) {
-            let point = {
-              x: ball.x,
-              y: ball.y
-            }
-            this.toRend.push(point);
-          }
-        });
-        this.ctx.strokeStyle = 'rgba(210, 120, 120, .1)';
-        this.ctx.lineWidth = 0.5;
+      
+      if ((index + 1) % 18 != 0) {
         this.ctx.beginPath();
-        this.toRend.forEach((point) => {
-          this.ctx.lineTo(point.x, point.y);
-        });
+        this.ctx.moveTo(ball.x, ball.y);
+        this.ctx.lineTo(ball.x, ball.y);
+        this.ctx.lineTo(this.balls[index + 1].x, this.balls[index + 1].y);
         this.ctx.stroke();
         this.ctx.closePath();
       }
+
+      if (index < this.balls.length - 18) {
+        this.ctx.lineWidth = 0.3;
+        this.ctx.moveTo(ball.x, ball.y);
+        this.ctx.lineTo(ball.x, ball.y);
+        this.ctx.lineTo(this.balls[index + 18].x, this.balls[index + 18].y);
+        this.ctx.stroke();
+      }
+
+
+      if (this.coordinates.x - ball.x > -35 && this.coordinates.x - ball.x < 35 && this.coordinates.y - ball.y > -35 && this.coordinates.y - ball.y < 35) {
+        this.ctx.strokeStyle = 'rgba(190, 70, 70, .5)';
+        this.ctx.lineWidth = 1;
+      }
+      this.ctx.stroke();
+      this.ctx.closePath();
     });
   }
 
