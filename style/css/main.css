@@ -111,7 +111,30 @@ body.with-header-static {
 }
 
 .display-checker p {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.display-checker a {
+  color: darkred;
+}
+
+.display-checker a.away::after {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-left: 3px;
+  vertical-align: super;
+  background: transparent url(../../img/link.png) no-repeat 0 0;
+  background-size: 100%;
+}
+
+.display-checker .errMessage::after {
+  content: '';
+  display: block;
+  width: 100px;
+  margin: 30px auto;
+  border-top: 1px solid #999;
 }
 
 .by-wrapper {
@@ -184,7 +207,7 @@ body.with-header-static {
   color: #f5f5f5;
 }
 
-@media (min-height: 500px) {
+@media (min-height: 700px) {
   .display-checker {
     background: #f4f4f4 url(../../img/error.png) no-repeat center bottom 50px/200px;
   }

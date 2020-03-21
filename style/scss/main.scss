@@ -39,7 +39,36 @@ body {
   color: $primaryColor;
 
   p {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: $accentColor;
+  }
+
+  a.away {
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      margin-left: 3px;
+      vertical-align: super;
+      background: transparent url(../../img/link.png) no-repeat 0 0;
+      background-size: 100%;
+    }
+  }
+
+  .errMessage {
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100px;
+      margin: 30px auto;
+      border-top: 1px solid $fadedColor;
+    }
   }
 }
 
@@ -102,7 +131,7 @@ body {
   }
 }
 
-@media (min-height: 500px) {
+@media (min-height: 700px) {
   .display-checker {
     background: $bgPrimaryColor url(../../img/error.png) no-repeat center bottom 50px / 200px;
   }
