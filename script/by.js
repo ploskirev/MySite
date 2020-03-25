@@ -14,6 +14,7 @@ let modalBy = {
     } else if (event.type == 'mouseout') {
       if (!event.relatedTarget && event.clientY < 1) {
         this.showModal();
+        document.removeEventListener('mouseout', this);
       }
     }
   },
