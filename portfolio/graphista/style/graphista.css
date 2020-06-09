@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', sans-serif;
+  font-weight: 100;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  cursor: crosshair;
+}
+
+#graphistaWrapper {
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+#graphista {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.tools {
+  position: fixed;
+  left: 30px;
+  top: 30px;
+  min-width: 100px;
+  padding: 20px 20px;
+  border: 1px solid #777;
+  border-radius: 5px;
+  background: url(../img/drag.png), url(../img/bg.png);
+  background-repeat: repeat-x, repeat;
+  background-position: 0 -3px, 0 0;
+  background-size: 5%, 100%;
+  background-color: #333;
+  color: #fff;
+  cursor: move;
+  transition: transform .9s;
+}
+
+.tools.noShow {
+  transform: translate(-1000px);
+}
+
+
+h1 {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+button,
+.button {
+  display: block;
+  margin: 0 auto;
+  width: 80px;
+  height: 30px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: rgb(65, 65, 65);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 27%;
+  text-decoration: none;
+  color: #555;
+  text-align: center;
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 12px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+a.button {
+  background: rgba(65, 65, 65, 1) url(../img/save.png) no-repeat center center;
+  background-size: 27%;
+}
+
+.brush {
+  background-image: url(../img/brush.png);
+}
+
+.circle {
+  background-image: url(../img/circle.png);
+}
+
+.rectangle {
+  background-image: url(../img/rect.png);
+  background-size: 30%;
+  background-position-x: 51%;
+}
+
+.spray {
+  background-image: url(../img/spray.png);
+  background-size: 15%;
+  background-position: 52% center;
+}
+
+.fill {
+  background-image: url(../img/fill.png);
+  background-size: 25%;
+  background-position: 52% center;
+}
+
+.undo {
+  background-image: url(../img/undo.png);
+  background-size: 35%;
+  background-position: 50% center;
+}
+
+.redo {
+  background-image: url(../img/redo.png);
+  background-size: 35%;
+  background-position: 50% center;
+}
+
+button:hover,
+a.button:hover {
+  background-color: rgb(58, 148, 166);
+}
+
+button:active,
+a.button:active {
+  background-color: rgb(255, 255, 255);
+}
+
+.undoredoWrapper {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.undo,
+.redo {
+  width: 36px;
+}
+
+.clear {
+  color: rgba(255, 255, 255, .7);
+}
+
+.activeTool {
+  background-color: #58E4FF;
+}
+
+input {
+  display: block;
+  width: 80px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.jscolor {
+  height: 30px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.coordinates {
+  width: 30px;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 10px;
+  color: rgba(255, 255, 255, .5);
+}
+
+.signature {
+  position: fixed;
+  bottom: 5px;
+  left: 5px;
+  font-size: 10px;
+  color: #555;
+  cursor: crosshair;
+}

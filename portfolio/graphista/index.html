@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/graphista.css">
+  <title>Graphista - online drawing app</title>
+</head>
+
+<body>
+  <p class="signature">2020 Denis Petrov-Ploskirev &copy;</p>
+  <main id="graphistaWrapper">
+      <canvas id="graphista" width="1000" height="700"></canvas>
+
+    <div class="tools noShow" draggable="true">
+      
+      <h1>Graphista</h1>
+      <button name="toolButton" data-name="brush" class="brush" title="brush"></button>
+      <button name="toolButton" data-name="circle" class="circle" title="circle"></button>
+      <button name="toolButton" data-name="rectangle" class="rectangle" title="rectangle"></button>
+      <button name="toolButton" data-name="spray" class="spray" title="spray"></button>
+      <button name="toolButton" data-name="fill" class="fill" title="fill"></button>
+
+      <input class="jscolor {onFineChange:'graphista.setColor(this)'}" value="000000" name="propertyInput" data-name="color">
+
+      <label for="lineWidth"> Line width </label>
+      <input type="range" id="lineWidth" value="1" min="1" max="20" step="1" name="propertyInput" data-name="size">
+
+
+      <div class="undoredoWrapper">
+        <button name="actionButton" data-name="undo" class="undo"></button>
+        <button name="actionButton" data-name="redo" class="redo"></button>
+      </div>
+      <button name="actionButton" data-name="clear" class="clear">Clear</button>
+      <a href="#" class="button" id="saveButton" name="actionButton" data-name="save" target="blanck" download="image.png"></a>
+
+      <div class="coordinates">
+        <p id="x"> <span>x:</span><span id="xCoord"></span></p>
+        <p id="y"> <span>y:</span><span id="yCoord"></span> </p>
+      </div>
+    </div>
+
+  </main>
+  
+  <script src="colorpicker/jscolor.js"></script>
+  <script defer src="js/graphista.js"></script>
+</body>
+
+</html>
