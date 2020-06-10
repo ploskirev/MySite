@@ -64,4 +64,4 @@ class Timer {
   }
 }
 
-let timer = new Timer('2020-06-10T02:33:00', '#timer', '#days', '#hours', '#mins', '#secs');
+let timer = new Timer('2020-06-09T00:00:00', '#timer', '#days', '#hours', '#mins', '#secs');
