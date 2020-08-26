@@ -24,7 +24,7 @@ class Chrono {
       this.container.textContent = '2016';
     } else if (c <= 0.98) {
       this.container.textContent = '2018';
-    } else if (c == 1) {
+    } else if (c >= 0.99) {
       this.container.innerText = '2020';
     }
   }

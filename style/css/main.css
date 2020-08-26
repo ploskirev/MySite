@@ -321,7 +321,7 @@ footer .footer-wrapper {
       grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   padding: 30px 10px;
-      grid-template-areas: "main         edu        tel" "portfolio   career      mail" "techs        cv         git" "hr            .         insta";
+      grid-template-areas: "main         edu        tel" "portfolio   career      mail" "techs        cv         git" "hr            .         tele";
 }
 
 footer .footer-wrapper .f-index {
@@ -384,10 +384,10 @@ footer .footer-wrapper .f-git {
   grid-area: git;
 }
 
-footer .footer-wrapper .f-insta {
+footer .footer-wrapper .f-tele {
   -ms-grid-row: 4;
   -ms-grid-column: 3;
-  grid-area: insta;
+  grid-area: tele;
 }
 
 footer .footer-wrapper a {
@@ -681,12 +681,13 @@ main .anotherblock p {
   color: darkred;
   text-transform: uppercase;
   font-size: .7rem;
+  margin-top: 5px;
 }
 
 main .anotherblock .time {
   font-size: 1.6rem;
   font-weight: 500;
-  color: #999;
+  color: rgba(139, 0, 0, 0.5);
   text-align: center;
 }
 
@@ -707,6 +708,16 @@ main .anotherblock canvas {
   border: 10px solid #999;
   border-radius: 40px;
   color: #f5f5f5;
+}
+
+.portfolio-section.p-vue-todo {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.85)), to(rgba(0, 0, 0, 0.7))), url(../../img/vue-todo.jpg) no-repeat 0 0/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.7)), url(../../img/vue-todo.jpg) no-repeat 0 0/cover;
+}
+
+.portfolio-section.p-financyst {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.85)), to(rgba(0, 0, 0, 0.7))), url(../../img/financyst.jpg) no-repeat 0 0/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.7)), url(../../img/financyst.jpg) no-repeat 0 0/cover;
 }
 
 .portfolio-section.p-graphista {

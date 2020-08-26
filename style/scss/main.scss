@@ -238,7 +238,7 @@ footer {
       "main         edu        tel"
       "portfolio   career      mail"
       "techs        cv         git"
-      "hr            .         insta";
+      "hr            .         tele";
 
     .f-index {
       grid-area: main;
@@ -280,8 +280,8 @@ footer {
       grid-area: git;
     }
 
-    .f-insta {
-      grid-area: insta;
+    .f-tele {
+      grid-area: tele;
     }
 
     a {
@@ -523,12 +523,13 @@ main {
       color: $accentColor;
       text-transform: uppercase;
       font-size: .7rem;
+      margin-top: 5px;
     }
 
     .time {
       font-size: 1.6rem;
       font-weight: 500;
-      color: $fadedColor;
+      color: transparentize($color: $accentColor, $amount: 0.5);
       text-align: center;
     }
 
@@ -554,6 +555,18 @@ main {
   border: 10px solid $fadedColor;
   border-radius: 40px;
   color: $secondaryColor;
+
+  &.p-vue-todo {
+    background: linear-gradient(rgba(0, 0, 0, .85),
+        rgba(0, 0, 0, .7)),
+      url(../../img/vue-todo.jpg) no-repeat 0 0 / cover;
+  }
+
+  &.p-financyst {
+    background: linear-gradient(rgba(0, 0, 0, .85),
+        rgba(0, 0, 0, .7)),
+      url(../../img/financyst.jpg) no-repeat 0 0 / cover;
+  }
 
   &.p-graphista {
     background: linear-gradient(rgba(0, 0, 0, .85),
